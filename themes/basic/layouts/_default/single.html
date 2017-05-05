@@ -1,0 +1,21 @@
+
+{{ partial "header.html" . }}
+
+  <ol class="breadcrumb">
+    <li>
+      <a href="/{{ .Section | urlize }}">
+        {{ .Section }}
+      </a>
+    </li>
+    <li class="active">
+      {{ .Title }}
+    </li>
+  </ol>
+
+  <h2>
+    {{ .Title }}
+  </h2>
+
+  {{ .Content }}
+
+{{ partial "footer.html" . }}

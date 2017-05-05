@@ -1,0 +1,21 @@
+
+{{ partial "header.html" . }}
+
+  {{ range .Data.Pages.GroupBy "Section" }}
+    <h5>
+      <a href="{{ .Key | urlize }}.html">
+        {{ .Key }}
+      </a>
+    </h5>
+    <ul>
+        {{ range .Pages }}
+          <li>
+            <a href="{{ .Permalink }}">
+              {{ .Title }}
+            </a>
+          </li>
+        {{ end }}
+    </ul>
+  {{ end }}
+
+{{ partial "footer.html" . }}

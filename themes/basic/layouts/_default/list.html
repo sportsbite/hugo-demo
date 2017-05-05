@@ -1,0 +1,15 @@
+
+{{ partial "header.html" . }}
+
+  <h5 class="text-muted">Sections / {{ .Title }}</h5>
+  <ul>
+    {{ range .Data.Pages }}
+      <li>
+        <a href="{{ .Permalink }}">
+          {{ .Title }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+
+{{ partial "footer.html" . }}
